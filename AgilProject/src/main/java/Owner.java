@@ -1,8 +1,8 @@
 public class Owner {
     private String name;
-    private String charge;
+    private Charge charge;
 
-    public Owner(String name, String charge){
+    public Owner(String name, Charge charge) {
         this.name = name;
         this.charge = charge;
     }
@@ -15,11 +15,11 @@ public class Owner {
         this.name = name;
     }
 
-    public String getCharge() {
+    public Charge getCharge() {
         return charge;
     }
 
-    public void setCharge(String charge) {
+    public void setCharge(Charge charge) {
         this.charge = charge;
     }
 }

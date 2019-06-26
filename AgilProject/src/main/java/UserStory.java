@@ -8,6 +8,7 @@ public class UserStory {
     private List<Task> taskList;
     private Owner owner;
     private int storyPoint;
+    private State state;
 
     public UserStory(){
         aceptanCriteriaList = new ArrayList<>();
@@ -60,6 +61,14 @@ public class UserStory {
 
     public void setStoryPoint(int storyPoint) {
         this.storyPoint = storyPoint;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 }
 

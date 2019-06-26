@@ -1,10 +1,9 @@
 public class Task {
     private String name;
-    private String state;
+    private boolean complited;
 
-    public Task(String name, String state){
+    public Task(String name) {
         this.name = name;
-        this.state = state;
     }
 
     public String getName() {
@@ -15,11 +14,12 @@ public class Task {
         this.name = name;
     }
 
-    public String getState() {
-        return state;
+    public boolean compliteTask() {
+        return complited = true;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public boolean anCheck() {
+        return complited = false;
     }
+
 }

@@ -7,16 +7,26 @@ public class Sprint {
     private Date startDate;
     private Date endDate;
 
-    public Sprint(){
+    public Sprint() {
         userStories = new ArrayList<>();
+    }
+
+    public void addUserStory(UserStory userStory) {
+        userStories.add(userStory);
     }
 
     public List<UserStory> getUserStories() {
         return userStories;
     }
 
-    public void setUserStories(List<UserStory> userStories) {
-        this.userStories = userStories;
+    public List<UserStory> getUserStoryByState(String state) {
+        List<UserStory> resulUserStory = new ArrayList<>();
+        userStories.stream().forEach(userStory -> {
+            if (userStory.getState().equals(state)) {
+                resulUserStory.add(userStory);
+            }
+        });
+        return resulUserStory;
     }
 
     public Date getStartDate() {
